@@ -6,50 +6,24 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
-    <style>
-        body {
-            margin: 0px;
-        }
-
-        :root{
-            --primary-color: #FCD34D;
-        }
-        .nav-bar {
-            background-color: var(--primary-color);
-            padding: 2rem;
-            text-align: center;
-            font-size: 2rem;
-        }
-
-        .text-area {
-            /* max-width: 100%; */
-            margin: 2rem auto;
-            /* display: block; */
-            border: 2px solid;
-            padding: 10px;
-            line-height: 6;
-            resize: none;
-        }
-
-        .footer-container {
-            bottom: 0;
-            width: 100%;
-            position: absolute;
-            height: 2.5rem;
-            background-color: var(--primary-color);
-        }
-
-
-    </style>
+    <link href="/styles.css" rel="stylesheet">
 </head>
 
 <body>
     <nav>
         <div class="nav-bar">Banana Talk</div>
     </nav>
-    <textarea class="text-area"></textarea>
-    
+
+    <textarea class="text-area-primary" id = "input-Text"
+        placeholder="Enter the text you want to be translated in minion language"></textarea>
+
+    <button class="btn-area" id="btn-click">Translate</button>
+
+    <textarea class="text-area-secondary" id="output-Text" placeholder="Translated text will appear here"></textarea>
+
     <footer class="footer-container">
+        <p>Hello, How are you.. or in minions language <strong>"Bello, amee nama to"</strong></p>
+        <p>To get to know more fun stuff in minions language, try using this webpage to translate your desired text</p>
     </footer>
 
 </body>
