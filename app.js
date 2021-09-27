@@ -4,26 +4,19 @@ var outputText = document.querySelector("#output-Text");
 
 var urlName = "	https://api.funtranslations.com/translate/minion.json";
 
+function exceptionHandler() {
+    console.log("ERROR: ", error);
+}
+
 function onClickEvent(){
     var responseURL = urlName + "?" + "text=" + inputText.value;
 
     fetch(responseURL)
     .then(Response => Response.json())
     .then(json => outputText.innerText = json.contents.translated)
+    .catch(exceptionHandler)
 
 }
 
-
 btnClick.addEventListener("click", onClickEvent)
 
-
-// fetch("https://api.funtranslations.com/translate/minion.json?text=I am inevitable")
-// .then(Response => Response.json())
-// .then(json => console.log(json))
-
-
-
-// document.querySelector("textarea")
-// document.querySelector(".btn-primary")
-// document.querySelector("#input-btn")
-// document.querySelector("input[name='translator']")
